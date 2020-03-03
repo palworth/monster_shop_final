@@ -3,3 +3,4 @@
 <p>Percent off: <%= @discount.percent_off %></p>
 <p>Amount of products needed to get discount: <%= @discount.discount_range %></p><br>
 <p><%= link_to "Edit Discount", "/merchant/discounts/#{@discount.id}/edit" %></p>
+<p><%= button_to "Delete Discount", "/merchant/discounts/#{@discount.id}", method: :delete %></p>

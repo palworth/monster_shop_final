@@ -37,6 +37,12 @@ class Merchant::DiscountsController < Merchant::BaseController
     end
   end
 
+  def destroy
+   discount = Discount.find(params[:discount_id])
+   discount.destroy
+   redirect_to "/merchant/discounts"
+  end
+
  private
 
  def private_discount_params
