@@ -32,6 +32,17 @@ class Cart
     grand_total
   end
 
+  def discount_applied
+    @contents.sum do |item_id,quantity|
+      item = Item.find(item_id)
+      item.unit_price(quantity) * quantity
+    end
+  end
+
+  def discount_text
+    "Discount Applied: New Total ="
+  end
+
   def count_of(item_id)
     @contents[item_id.to_s]
   end
