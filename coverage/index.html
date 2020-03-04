@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-03-03T19:15:50-07:00">2020-03-03T19:15:50-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-03-03T19:27:05-07:00">2020-03-03T19:27:05-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.81%</span></span>
+    (<span class="covered_percent"><span class="green">99.85%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.47
+         5.48
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>88</b> files in total.
-    <b>2581</b> relevant lines. 
-    <span class="green"><b>2576</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <b>2587</b> relevant lines. 
+    <span class="green"><b>2583</b> lines covered</span> and
+    <span class="red"><b>4</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -262,12 +262,12 @@
       
       <tr>
         <td class="strong"><a href="#fd87648852d1a0870f6c86ecc16cc2a58c72ba03" class="src_link" title="app/models/cart.rb">app/models/cart.rb</a></td>
-        <td class="green strong">96.77 %</td>
+        <td class="green strong">100.0 %</td>
         <td>57</td>
         <td>31</td>
-        <td>30</td>
-        <td>1</td>
-        <td>101.9</td>
+        <td>31</td>
+        <td>0</td>
+        <td>102.2</td>
       </tr>
       
       <tr>
@@ -287,7 +287,7 @@
         <td>18</td>
         <td>18</td>
         <td>0</td>
-        <td>26.6</td>
+        <td>26.9</td>
       </tr>
       
       <tr>
@@ -843,11 +843,11 @@
       <tr>
         <td class="strong"><a href="#74dd7630658275d3bc9d1b7fc39600a4cc2563ad" class="src_link" title="spec/models/cart_spec.rb">spec/models/cart_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>67</td>
-        <td>33</td>
-        <td>33</td>
+        <td>75</td>
+        <td>37</td>
+        <td>37</td>
         <td>0</td>
-        <td>2.5</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -863,11 +863,11 @@
       <tr>
         <td class="strong"><a href="#b1a4840fc7e3cbd39ddcbad88c02987b319bccb7" class="src_link" title="spec/models/item_spec.rb">spec/models/item_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>77</td>
-        <td>58</td>
-        <td>58</td>
+        <td>81</td>
+        <td>60</td>
+        <td>60</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -4306,11 +4306,11 @@
         <div class="source_table" id="fd87648852d1a0870f6c86ecc16cc2a58c72ba03">
   <div class="header">
     <h3>app/models/cart.rb</h3>
-    <h4><span class="green">96.77 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>31</b> relevant lines. 
-      <span class="green"><b>30</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>31</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -4341,14 +4341,14 @@
           <code class="ruby">  def initialize(contents)</code>
         </li>
       
-        <li class="covered" data-hits="512" data-linenumber="5">
-          <span class="hits">512</span>
+        <li class="covered" data-hits="514" data-linenumber="5">
+          <span class="hits">514</span>
           
           <code class="ruby">    @contents = contents || {}</code>
         </li>
       
-        <li class="covered" data-hits="512" data-linenumber="6">
-          <span class="hits">512</span>
+        <li class="covered" data-hits="514" data-linenumber="6">
+          <span class="hits">514</span>
           
           <code class="ruby">    @contents.default = 0</code>
         </li>
@@ -4527,20 +4527,20 @@
           <code class="ruby">  def discount_applied</code>
         </li>
       
-        <li class="covered" data-hits="100" data-linenumber="36">
-          <span class="hits">100</span>
+        <li class="covered" data-hits="101" data-linenumber="36">
+          <span class="hits">101</span>
           
           <code class="ruby">    @contents.sum do |item_id,quantity|</code>
         </li>
       
-        <li class="covered" data-hits="111" data-linenumber="37">
-          <span class="hits">111</span>
+        <li class="covered" data-hits="113" data-linenumber="37">
+          <span class="hits">113</span>
           
           <code class="ruby">      item = Item.find(item_id)</code>
         </li>
       
-        <li class="covered" data-hits="111" data-linenumber="38">
-          <span class="hits">111</span>
+        <li class="covered" data-hits="113" data-linenumber="38">
+          <span class="hits">113</span>
           
           <code class="ruby">      item.price_per_unit(quantity) * quantity</code>
         </li>
@@ -4569,8 +4569,8 @@
           <code class="ruby">  def discount_text</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
-          
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
           
           <code class="ruby">    &quot;Discount Applied: New Total =&quot;</code>
         </li>
@@ -4967,14 +4967,14 @@
           <code class="ruby">  def price_per_unit(quantity)</code>
         </li>
       
-        <li class="covered" data-hits="111" data-linenumber="34">
-          <span class="hits">111</span>
+        <li class="covered" data-hits="114" data-linenumber="34">
+          <span class="hits">114</span>
           
           <code class="ruby">    if merchant.discounts.select(:percent_off).where(&quot;lowest_amount &lt; #{quantity} AND highest_amount &gt; #{quantity}&quot;).order(&quot;percent_off&quot;).order(&quot;percent_off desc&quot;).limit(1).pluck(:percent_off).first.nil?</code>
         </li>
       
-        <li class="covered" data-hits="49" data-linenumber="35">
-          <span class="hits">49</span>
+        <li class="covered" data-hits="52" data-linenumber="35">
+          <span class="hits">52</span>
           
           <code class="ruby">      price</code>
         </li>
@@ -26296,8 +26296,8 @@
     <h3>spec/models/cart_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>33</b> relevant lines. 
-      <span class="green"><b>33</b> lines covered</span> and
+      <b>37</b> relevant lines. 
+      <span class="green"><b>37</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -26335,38 +26335,38 @@
           <code class="ruby">    before :each do</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="6">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="6">
+          <span class="hits">11</span>
           
           <code class="ruby">      @megan = Merchant.create!(name: &#39;Megans Marmalades&#39;, address: &#39;123 Main St&#39;, city: &#39;Denver&#39;, state: &#39;CO&#39;, zip: 80218)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="7">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="7">
+          <span class="hits">11</span>
           
           <code class="ruby">      @brian = Merchant.create!(name: &#39;Brians Bagels&#39;, address: &#39;125 Main St&#39;, city: &#39;Denver&#39;, state: &#39;CO&#39;, zip: 80218)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="8">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="8">
+          <span class="hits">11</span>
           
           <code class="ruby">      @ogre = @megan.items.create!(name: &#39;Ogre&#39;, description: &quot;I&#39;m an Ogre!&quot;, price: 20, image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw&#39;, active: true, inventory: 5 )</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="9">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="9">
+          <span class="hits">11</span>
           
           <code class="ruby">      @giant = @megan.items.create!(name: &#39;Giant&#39;, description: &quot;I&#39;m a Giant!&quot;, price: 50, image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw&#39;, active: true, inventory: 2 )</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="10">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="10">
+          <span class="hits">11</span>
           
           <code class="ruby">      @hippo = @brian.items.create!(name: &#39;Hippo&#39;, description: &quot;I&#39;m a Hippo!&quot;, price: 50, image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw&#39;, active: true, inventory: 3 )</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="11">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="11">
+          <span class="hits">11</span>
           
           <code class="ruby">      @cart = Cart.new({</code>
         </li>
@@ -26698,10 +26698,58 @@
         <li class="never" data-hits="" data-linenumber="66">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;discount_text&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@cart.discount_text).to eq(&quot;Discount Applied: New Total =&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;discount_applied&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@cart.discount_applied).to eq(120.0)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">end</code>
@@ -27060,8 +27108,8 @@
     <h3>spec/models/item_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>58</b> relevant lines. 
-      <span class="green"><b>58</b> lines covered</span> and
+      <b>60</b> relevant lines. 
+      <span class="green"><b>60</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -27327,128 +27375,128 @@
           <code class="ruby">    before :each do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="44">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="44">
+          <span class="hits">3</span>
           
           <code class="ruby">      @megan = Merchant.create!(name: &#39;Megans Marmalades&#39;, address: &#39;123 Main St&#39;, city: &#39;Denver&#39;, state: &#39;CO&#39;, zip: 80218)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="45">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="45">
+          <span class="hits">3</span>
           
           <code class="ruby">      @brian = Merchant.create!(name: &#39;Brians Bagels&#39;, address: &#39;125 Main St&#39;, city: &#39;Denver&#39;, state: &#39;CO&#39;, zip: 80218)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="46">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="46">
+          <span class="hits">3</span>
           
           <code class="ruby">      @ogre = @megan.items.create!(name: &#39;Ogre&#39;, description: &quot;I&#39;m an Ogre!&quot;, price: 20, image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw&#39;, active: true, inventory: 5 )</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="47">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="47">
+          <span class="hits">3</span>
           
           <code class="ruby">      @giant = @megan.items.create!(name: &#39;Giant&#39;, description: &quot;I&#39;m a Giant!&quot;, price: 20, image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw&#39;, active: true, inventory: 5 )</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="48">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="48">
+          <span class="hits">3</span>
           
           <code class="ruby">      @nessie = @brian.items.create!(name: &#39;Nessie&#39;, description: &quot;I&#39;m a Loch Monster!&quot;, price: 50, image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw&#39;, active: false, inventory: 3 )</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="49">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="49">
+          <span class="hits">3</span>
           
           <code class="ruby">      @hippo = @brian.items.create!(name: &#39;Hippo&#39;, description: &quot;I&#39;m a Loch Monster!&quot;, price: 50, image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw&#39;, active: false, inventory: 3 )</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="50">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="50">
+          <span class="hits">3</span>
           
           <code class="ruby">      @gator = @brian.items.create!(name: &#39;Gator&#39;, description: &quot;I&#39;m a Loch Monster!&quot;, price: 50, image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw&#39;, active: false, inventory: 3 )</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="51">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="51">
+          <span class="hits">3</span>
           
           <code class="ruby">      @review_1 = @ogre.reviews.create(title: &#39;Great!&#39;, description: &#39;This Ogre is Great!&#39;, rating: 5)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="52">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="52">
+          <span class="hits">3</span>
           
           <code class="ruby">      @review_2 = @ogre.reviews.create(title: &#39;Meh.&#39;, description: &#39;This Ogre is Mediocre&#39;, rating: 3)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="53">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="53">
+          <span class="hits">3</span>
           
           <code class="ruby">      @review_3 = @ogre.reviews.create(title: &#39;EW&#39;, description: &#39;This Ogre is Ew&#39;, rating: 1)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="54">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="54">
+          <span class="hits">3</span>
           
           <code class="ruby">      @review_4 = @ogre.reviews.create(title: &#39;So So&#39;, description: &#39;This Ogre is So so&#39;, rating: 2)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="55">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="55">
+          <span class="hits">3</span>
           
           <code class="ruby">      @review_5 = @ogre.reviews.create(title: &#39;Okay&#39;, description: &#39;This Ogre is Okay&#39;, rating: 4)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="56">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="56">
+          <span class="hits">3</span>
           
           <code class="ruby">      @user = User.create!(name: &#39;Megan&#39;, address: &#39;123 Main St&#39;, city: &#39;Denver&#39;, state: &#39;CO&#39;, zip: 80218, email: &#39;megan@example.com&#39;, password: &#39;securepassword&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="57">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="57">
+          <span class="hits">3</span>
           
           <code class="ruby">      @order_1 = @user.orders.create!</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="58">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="58">
+          <span class="hits">3</span>
           
           <code class="ruby">      @order_2 = @user.orders.create!</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="59">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="59">
+          <span class="hits">3</span>
           
           <code class="ruby">      @order_3 = @user.orders.create!</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="60">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="60">
+          <span class="hits">3</span>
           
           <code class="ruby">      @order_1.order_items.create!(item: @ogre, price: @ogre.price, quantity: 2)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="61">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="61">
+          <span class="hits">3</span>
           
           <code class="ruby">      @order_1.order_items.create!(item: @hippo, price: @hippo.price, quantity: 3)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="62">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="62">
+          <span class="hits">3</span>
           
           <code class="ruby">      @order_2.order_items.create!(item: @hippo, price: @hippo.price, quantity: 5)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="63">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="63">
+          <span class="hits">3</span>
           
           <code class="ruby">      @order_3.order_items.create!(item: @nessie, price: @nessie.price, quantity: 7)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="64">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="64">
+          <span class="hits">3</span>
           
           <code class="ruby">      @order_3.order_items.create!(item: @gator, price: @gator.price, quantity: 1)</code>
         </li>
@@ -27522,10 +27570,34 @@
         <li class="never" data-hits="" data-linenumber="76">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;price_per_unit&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@ogre.price_per_unit(30)).to eq(20.0)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">end</code>
