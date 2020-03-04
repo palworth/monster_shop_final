@@ -1,6 +1,6 @@
 <h1><%= @item.name %></h1>
 <p><%= @item.description %></p>
-<%= image_tag @item.image%>
+<%= image_tag("#{@item.image}", :style => 'width: 600px;')%>
 <p>Price: <%= number_to_currency(@item.price) %></p>
 <p>Sold by: <%= link_to @item.merchant.name, "/merchants/#{@item.merchant_id}" %>, Inventory: <%= @item.inventory %></p>
 <p><%= @item.active ? "Active" : "Inactive" %></p>
