@@ -23,9 +23,9 @@ bike_shop.items.create!(name: 'Tire wrench', description: "Easy!", price: 10, im
 bike_shop.items.create!(name: 'Front axle', description: "sturdy!", price: 150, image: 'https://i.ebayimg.com/images/i/271316523336-0-1/s-l1000.jpg', active: true, inventory: 50 )
 bike_shop.items.create!(name: 'Shock', description: "Huge!", price: 850, image: 'https://www.jensonusa.com/globalassets/product-images---all-assets/fox-racing-shox/rs199b048.75-2.5--remo.jpg', active: true, inventory: 3 )
 
-megan.items.create!(name: 'Ogre', description: "I'm an Ogre!", price: 20, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw', active: true, inventory: 5 )
-megan.items.create!(name: 'Giant', description: "I'm a Giant!", price: 50, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw', active: true, inventory: 3 )
-brian.items.create!(name: 'Hippo', description: "I'm a Hippo!", price: 50, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaLM_vbg2Rh-mZ-B4t-RSU9AmSfEEq_SN9xPP_qrA2I6Ftq_D9Qw', active: true, inventory: 3 )
+megan.items.create!(name: 'Orange Marmalade', description: "Super good", price: 20, image: 'https://recipesmadeeasy.co.uk/wp-content/uploads/2017/01/marmalade-2-Edit.jpg', active: true, inventory: 50 )
+megan.items.create!(name: 'Grapefruit Marmalade', description: "the rarest marmalade!", price: 30, image: 'https://www.m-s.gr/wp-content/uploads/2015/03/D3S_7886-copy-462x601.jpg', active: true, inventory: 12)
+brian.items.create!(name: 'Plain Bagel', description: "True Classic", price: 2, image: 'https://cdn-images-1.medium.com/max/1600/0*E78sVvqL5Dfgrm5m.', active: true, inventory: 34 )
 
 #Merchant Users
 bike_shop.users.create!(name: "Mike",
@@ -61,7 +61,7 @@ megan.discounts.create!(title: "Discount",
                                           percent_off: 5,
                                           information: "Thanks for buying in bulk",
                                           lowest_amount: 4,
-                                          highest_amount: 10)                                          
+                                          highest_amount: 10)
 megan.discounts.create!(title: "Another One",
                                           percent_off: 5,
                                           information: "Good choice",
