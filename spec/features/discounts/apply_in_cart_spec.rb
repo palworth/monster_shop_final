@@ -58,6 +58,15 @@ RSpec.describe "As a regular user", type: :feature do
       visit '/cart'
     end
 
+   #  it "I add less than 5 items and don't see discount applied text" do
+   #    expect(current_path).to eq("/cart")
+   #    expect(page).to have_content(@item1.name)
+   #    within"#item-#{@item1.id}" do
+   #      click_button 'More of This!'
+   #      click_button 'More of This!'
+   #    end
+   #  expect(page).to_not have_content("Discount Applied:")
+   # end
     it "I add 5 items and recieve the fist discount, bulk discount" do
       expect(current_path).to eq("/cart")
       expect(page).to have_content(@item1.name)
