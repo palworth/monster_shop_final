@@ -3415,7 +3415,6 @@
         1,
         36,
         52,
-        null,
         52,
         null,
         null,
@@ -3625,14 +3624,10 @@
         null,
         null,
         1,
-        null,
         52,
         50,
         null,
-        null,
         2,
-        null,
-        null,
         null,
         null,
         null
@@ -4525,6 +4520,6 @@
         null
       ]
     },
-    "timestamp": 1583282428
+    "timestamp": 1583282530
   }
 }
