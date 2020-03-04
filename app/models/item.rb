@@ -31,6 +31,7 @@ class Item < ApplicationRecord
   end
 
   def unit_price(quantity)
+    # require "pry"; binding.pry
     if merchant.discounts.select(:percent_off).where("lowest_amount < #{quantity} AND highest_amount > #{quantity}").order("percent_off").limit(1).pluck(:percent_off).first.nil?
       price
     else
