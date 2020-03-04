@@ -63,5 +63,13 @@ RSpec.describe Cart do
 
       expect(@cart.count_of(@giant.id)).to eq(1)
     end
+
+    it "discount_text" do
+      expect(@cart.discount_text).to eq("Discount Applied: New Total =")
+    end
+
+    it "discount_applied" do
+      expect(@cart.discount_applied).to eq(120.0)
+    end
   end
 end
