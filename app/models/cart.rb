@@ -35,7 +35,7 @@ class Cart
   def discount_applied
     @contents.sum do |item_id,quantity|
       item = Item.find(item_id)
-      item.unit_price(quantity) * quantity
+      item.price_per_unit(quantity) * quantity
     end
   end
 
