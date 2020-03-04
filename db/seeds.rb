@@ -41,7 +41,7 @@ bike_shop.users.create!(name: "Mike",
                   password: "tim",
                                                                role: 1)
 
-megan.discounts.create!(title: "Bulk Discount",
+megan.discounts.create!(title: "Discount",
                                           percent_off: 5,
                                           information: "Thanks for buying in bulk",
                                           lowest_amount: 4,
@@ -51,11 +51,11 @@ bike_shop.discounts.create!(title: "Bulk Discount",
                                           information: "Thanks for buying in bulk",
                                           lowest_amount: 4,
                                           highest_amount: 10)
-bike_shop.discounts.create!(title: "Bulk Discount",
-                                          percent_off: 5,
+bike_shop.discounts.create!(title: "Conflict Discount",
+                                          percent_off: 90,
                                           information: "Thanks for buying in bulk",
-                                          lowest_amount: 4,
-                                          highest_amount: 10)
+                                          lowest_amount: 9,
+                                          highest_amount: 12)
 bike_shop.discounts.create!(title: "huge Discount",
                                           percent_off: 20,
                                           information: "Thanks for buying in bulk",
