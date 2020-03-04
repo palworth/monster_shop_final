@@ -58,28 +58,86 @@ RSpec.describe "As a regular user", type: :feature do
       visit '/cart'
     end
 
-   #  it "I add less than 5 items and don't see discount applied text" do
-   #    expect(current_path).to eq("/cart")
-   #    expect(page).to have_content(@item1.name)
-   #    within"#item-#{@item1.id}" do
-   #      click_button 'More of This!'
-   #      click_button 'More of This!'
-   #    end
-   #  expect(page).to_not have_content("Discount Applied:")
-   # end
-    it "I add 5 items and recieve the fist discount, bulk discount" do
+    it "I add less than 5 items and don't see discount applied text" do
+      expect(current_path).to eq("/cart")
+      expect(page).to have_content(@item1.name)
+        within"#item-#{@item1.id}" do
+          click_button 'More of This!'
+          click_button 'More of This!'
+        end
+      expect(page).to_not have_content("Discount Applied:")
+    end
+
+   it "I add less than 5 items and don't see discount applied text" do
       expect(current_path).to eq("/cart")
       expect(page).to have_content(@item1.name)
       within"#item-#{@item1.id}" do
         click_button 'More of This!'
         click_button 'More of This!'
+      end
+      visit item_path(@item2)
+      click_button 'Add to Cart'
+      visit '/cart'
+      within"#item-#{@item2.id}" do
         click_button 'More of This!'
         click_button 'More of This!'
       end
-    expect(page).to have_content("Discount Applied: New Total = $750.00")
+    expect(page).to_not have_content("Discount Applied:")
    end
 
-
-
+  it "I add 5 items and recieve the fist discount, bulk discount" do
+      expect(current_path).to eq("/cart")
+      expect(page).to have_content(@item1.name)
+        within"#item-#{@item1.id}" do
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+        end
+    expect(page).to have_content("Discount Applied: New Total = $750.00")
     end
+
+    it "I add 10 items and recieve the fist discount, bulk discount" do
+      expect(current_path).to eq("/cart")
+      expect(page).to have_content(@item1.name)
+        within"#item-#{@item1.id}" do
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+        end
+    expect(page).to have_content("Discount Applied: New Total = $1,600.00")
+    end
+
+    it "I add 20 items and recieve the fist discount, bulk discount" do
+       expect(current_path).to eq("/cart")
+       expect(page).to have_content(@item1.name)
+        within"#item-#{@item1.id}" do
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+          click_button 'More of This!'
+        end
+        expect(page).to have_content("Discount Applied: New Total = $3,040.00")
+    end
+   end
   end
