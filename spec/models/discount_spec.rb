@@ -33,8 +33,8 @@ RSpec.describe Discount, type: :model do
       @discount1 = @bike_shop.discounts.create!(title: "Bulk Discount",
                                                 percent_off: 5,
                                                 information: "Thanks for buying in bulk",
-                                                lowest_amount: 5,
-                                                highest_amount: 9)
+                                                lowest_amount: 4,
+                                                highest_amount: 10)
       @discount2 = @bike_shop.discounts.create!(title: "huge Discount",
                                                 percent_off: 20,
                                                 information: "Thanks for buying in bulk",
