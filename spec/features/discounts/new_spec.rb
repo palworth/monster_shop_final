@@ -38,6 +38,21 @@ RSpec.describe "As a merchant employee", type: :feature do
       click_button "Log In"
   end
 
+  it "I see a link to create a new discount and make new discount" do
+    expect(page).to have_link('Create New Discount')
+    click_link ('Create New Discount')
+    expect(current_path).to eq("/merchant/discounts/new")
+    fill_in :title, with: "New Discount"
+    fill_in :percent_off, with: 13
+    fill_in :information, with: "This is the best discount"
+    fill_in :lowest_amount, with: 30
+    fill_in :highest_amount, with: nil
+    click_button 'Submit'
+
+    expect(current_path).to eq("/merchant/discounts/new")
+    expect(page).to have_content("Failed to create new discount, try again!")
+  end
+
   it "I see a link to create a new discount" do
     expect(page).to have_link('Create New Discount')
     click_link ('Create New Discount')
@@ -52,7 +67,6 @@ RSpec.describe "As a merchant employee", type: :feature do
     expect(current_path).to eq("/merchant/discounts")
     expect(page).to have_content("New Discount")
     expect(page).to have_content("50")
-
   end
  end
 end

@@ -32,7 +32,7 @@ class Merchant::DiscountsController < Merchant::BaseController
       flash[:notice] = "Your discount changes have been saved."
       redirect_to "/merchant/discounts/#{discount.id}"
     else
-      flash[:notice] = "Your discount changes have not been saved."
+      flash[:notice] = "Your discount changes have not been saved, try again!"
       redirect_to "/merchant/discounts/#{discount.id}/edit"
     end
   end

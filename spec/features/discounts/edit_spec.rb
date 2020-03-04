@@ -55,5 +55,17 @@ RSpec.describe "As a merchant employee", type: :feature do
       expect(page).to have_content("85")
     end
 
+    it "I edit the the form wrong" do
+      click_link "#{@discount1.title}"
+      expect(current_path).to eq("/merchant/discounts/#{@discount1.id}")
+
+      click_link 'Edit Discount'
+      expect(current_path).to eq("/merchant/discounts/#{@discount1.id}/edit")
+      fill_in :title, with: "I can update Discount"
+      fill_in :percent_off, with: nil
+      click_button 'Submit'
+      expect(current_path).to eq("/merchant/discounts/#{@discount1.id}/edit")
+      expect(page).to have_content("Your discount changes have not been saved, try again!")
+    end
   end
 end
