@@ -73,5 +73,9 @@ RSpec.describe Item do
       expect(Item.by_popularity(3, "ASC")).to eq([@giant, @gator, @ogre])
       expect(Item.by_popularity(3, "DESC")).to eq([@hippo, @nessie, @ogre])
     end
+
+    it 'price_per_unit' do
+      expect(@ogre.price_per_unit(30)).to eq(20.0)
+    end
   end
 end
