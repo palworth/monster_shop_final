@@ -48,6 +48,11 @@ RSpec.describe "As a regular user", type: :feature do
                                                 information: "Thanks for buying in bulk",
                                                 lowest_amount: 19,
                                                 highest_amount: 30)
+     @conflict_discount = @bike_shop.discounts.create!(title: "Conflict Discount",
+                                                      percent_off: 90,
+                                                      information: "Thanks for buying in bulk",
+                                                      lowest_amount: 10,
+                                                      highest_amount: 22)
       visit "/login"
       fill_in :email, with: @tim.email
       fill_in :password, with: @tim.password
@@ -58,72 +63,10 @@ RSpec.describe "As a regular user", type: :feature do
       visit '/cart'
     end
 
-    it "I add less than 5 items and don't see discount applied text" do
+    it "When I have conflicting discounts, the greater discount is applied " do
       expect(current_path).to eq("/cart")
       expect(page).to have_content(@item1.name)
         within"#item-#{@item1.id}" do
-          click_button 'More of This!'
-          click_button 'More of This!'
-        end
-      expect(page).to_not have_content("Discount Applied:")
-    end
-
-   it "I add less than 5 items and don't see discount applied text" do
-      expect(current_path).to eq("/cart")
-      expect(page).to have_content(@item1.name)
-      within"#item-#{@item1.id}" do
-        click_button 'More of This!'
-        click_button 'More of This!'
-      end
-      visit item_path(@item2)
-      click_button 'Add to Cart'
-      visit '/cart'
-      within"#item-#{@item2.id}" do
-        click_button 'More of This!'
-        click_button 'More of This!'
-      end
-    expect(page).to_not have_content("Discount Applied:")
-   end
-
-  it "I add 5 items and recieve the fist discount, bulk discount" do
-      expect(current_path).to eq("/cart")
-      expect(page).to have_content(@item1.name)
-        within"#item-#{@item1.id}" do
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-        end
-    expect(page).to have_content("Discount Applied: New Total = $750.00")
-    end
-
-    it "I add 10 items and recieve the fist discount, bulk discount" do
-      expect(current_path).to eq("/cart")
-      expect(page).to have_content(@item1.name)
-        within"#item-#{@item1.id}" do
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-        end
-    expect(page).to have_content("Discount Applied: New Total = $1,600.00")
-    end
-
-    it "I add 20 items and recieve the fist discount, bulk discount" do
-       expect(current_path).to eq("/cart")
-       expect(page).to have_content(@item1.name)
-        within"#item-#{@item1.id}" do
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
-          click_button 'More of This!'
           click_button 'More of This!'
           click_button 'More of This!'
           click_button 'More of This!'
@@ -137,7 +80,7 @@ RSpec.describe "As a regular user", type: :feature do
           click_button 'More of This!'
           click_button 'More of This!'
         end
-        expect(page).to have_content("Discount Applied: New Total = $3,040.00")
+      expect(page).to have_content("Discount Applied: New Total = $260.00")
     end
-   end
   end
+end
