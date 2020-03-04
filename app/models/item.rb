@@ -30,7 +30,7 @@ class Item < ApplicationRecord
     reviews.average(:rating)
   end
 
-  def unit_price(quantity)
+  def price_per_unit(quantity)
     if merchant.discounts.select(:percent_off).where("lowest_amount < #{quantity} AND highest_amount > #{quantity}").order("percent_off").order("percent_off desc").limit(1).pluck(:percent_off).first.nil?
       price
     else
